@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-font: 'Bebas Neue', sans-serif;
+  --mc-main-color: #232472;
+  --sc-second-color: #00ff30;
+  --wh--white-background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: var(--mc-main-color);
+}
+
+.converter {
+  padding: 20px;
+  border: 1px solid var(--sc-second-color);
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 4px var(--sc-second-color);
+  margin-bottom: 50px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+input[type="number"],
+input[type="text"], /* Include text inputs */
+select,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #00ff30;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--wh--white-background);
+  font-size: 16px;
+  font-family: var(--ff-font);
+}
+
+/* Apply the same styles to both number and text inputs */
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: var(--wh--white-background);
+}
+
+/* Rest of your styles */
+
+button {
+  cursor: pointer;
+  background-color: var(--mc-main-color);
+  border: none;
+  color: var(--sc-second-color);
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--sc-second-color);
+  color: var(--mc-main-color);
+  transition: background-color 1s;
+}
+
+@media (min-width: 1024px) {
+  .converter {
+    max-width: 600px;
+  }
+}
